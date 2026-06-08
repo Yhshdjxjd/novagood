@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaGo Image Gallery & Official Assets</title>
+    <meta name="google-site-verification" content="Zh1TC6SnuMUpRWhhCDsuHzeWs_LuGA8E5hWi4RgWmCM" />
+    
+    <!-- Tailwind CSS (CDN for standalone HTML) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .line-clamp-1 {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-50 relative selection:bg-blue-100 selection:text-blue-900">
+    
+    <!-- Decorative background gradient -->
+    <div class="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-blue-50 to-transparent pointer-events-none"></div>
+
+    <header class="relative pt-16 pb-12 px-4 border-b border-slate-200/60 bg-white/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100/50 text-blue-600 text-sm font-medium mb-6">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Official Assets
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-slate-900 tracking-tight">
+                Nova Image <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Gallery</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-center text-slate-600 md:text-lg">
+                A curated collection of NovaGo Browser assets, screenshots, and promotional materials.
+            </p>
+        </div>
+    </header>
+
+    <main class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+        <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Images will be injected here via JavaScript for easy management -->
+        </div>
+    </main>
+
+    <script>
+        const images = [
+            // Official Logos & Icons
+            { href: "https://ibb.co/gbWHtB3G", src: "https://i.ibb.co/gbWHtB3G/IMG-20260603-185018.png", alt: "NovaGo Browser Official Primary Text Logo", title: "NovaGo Primary Official Logo" },
+            { href: "https://ibb.co/ynWzBH9R", src: "https://i.ibb.co/N6Z0ncv3/IMG-20260603-185032.png", alt: "NovaGo Browser Secondary N Icon Logo", title: "NovaGo Secondary 'N' Logo" },
+            { href: "https://ibb.co/8gp7tvs9", src: "https://i.ibb.co/tptJFjKD/logo.png", alt: "NovaGo Browser Transparent Brand Logo", title: "NovaGo Transparent Brand Logo" },
+            { href: "https://imgbb.com/", src: "https://i.ibb.co/GvfLn4L9/ic-launcher.png", alt: "NovaGo Android App High Resolution Launcher Icon", title: "NovaGo High-Res App Icon" },
+            { href: "https://ibb.co/8HrcVMg", src: "https://i.ibb.co/Ts4L5cM/ic-launcher.png", alt: "NovaGo Android App Square Icon", title: "NovaGo Official App Icon" },
+            { href: "https://ibb.co/Q3ngQp7F", src: "https://i.ibb.co/Pv4LjFsZ/qrcode.png", alt: "NovaGo Browser APK Download QR Code", title: "NovaGo Download QR Code" },
+
+            // Advertising & Promo
+            { href: "https://ibb.co/cXsShZ0z", src: "https://i.ibb.co/zHtTVBpK/IMG-20260603-185258.png", alt: "NovaGo Browser Bus Stop Advertisement Setup", title: "NovaGo Bus Stop Ad Mockup" },
+            { href: "https://ibb.co/9H431RtS", src: "https://i.ibb.co/ch8XZzLV/IMG-20260603-184958.png", alt: "NovaGo Highway Billboard Advertisement Graphic", title: "NovaGo Highway Billboard Ad" },
+            { href: "https://ibb.co/qYfmB8ZB", src: "https://i.ibb.co/k2fqKTdK/IMG-20260603-184919.png", alt: "NovaGo Airport Terminal Digital Ad Banner", title: "NovaGo Airport Digital Banner" },
+            { href: "https://ibb.co/DHhRSBgc", src: "https://i.ibb.co/zTp403H9/IMG-20260603-185230.png", alt: "NovaGo Futuristic Holographic Interface Concept in Library", title: "NovaGo AR Browsing Concept" },
+
+            // Device Mockups
+            { href: "https://ibb.co/9KjPd9c", src: "https://i.ibb.co/j0Ftjvb/file-00000000548071fda3d20c7c0b47de04.png", alt: "NovaGo Browser Homepage displayed on a smartphone over a wooden desk", title: "NovaGo Smartphone Desk Mockup" },
+            { href: "https://ibb.co/d4zXp9K7", src: "https://i.ibb.co/HTkRPvgX/place-the-novago-logo-on-a-modern-smartp-fl-Zzs-Cnd-WAW5xet-Yggd-MPw-w-T4-Cws3o-TGq9hdze8-Sb2gw-sd-sma.jpg", alt: "NovaGo Android App Smartphone Presentation Mockup", title: "NovaGo Smartphone Presentation" },
+            { href: "https://ibb.co/84nN7wMQ", src: "https://i.ibb.co/cXKkr9Js/place-the-novago-logo-on-a-modern-smartp-XIs-LE7-NSU66s-M6lvs-Uc-LEA-w-T4-Cws3o-TGq9hdze8-Sb2gw-sd-smal.jpg", alt: "Close-up mockup of NovaGo Mobile Browser", title: "NovaGo Mobile Close-up Mockup" },
+            { href: "https://ibb.co/MxhcsCm8", src: "https://i.ibb.co/ycR6XQrh/IMG-20260603-185145.png", alt: "NovaGo App Interface on Android Device", title: "NovaGo App Interface Mockup" },
+            { href: "https://ibb.co/TBvS8bj6", src: "https://i.ibb.co/d0Wq2LCF/IMG-20260603-185123.png", alt: "NovaGo Clean UI Concept on Mobile", title: "NovaGo Clean UI Concept" },
+            { href: "https://ibb.co/4nbH1hYs", src: "https://i.ibb.co/nNXFPxn3/IMG-20260603-185050.png", alt: "NovaGo Fast Browsing UI Graphic", title: "NovaGo Fast Browsing UI" },
+
+            // Interface & Features
+            { href: "https://ibb.co/99RC84rP", src: "https://i.ibb.co/7J76Yp1h/IMG-20260603-184852.png", alt: "NovaGo Mobile App Features Overview Graphic", title: "NovaGo App Features Overview" },
+            { href: "https://ibb.co/mwbB7Ph", src: "https://i.ibb.co/75jzF0r/file-00000000a584720bb313423cb60b2df6.png", alt: "NovaGo Speed and Performance Highlight Visual", title: "NovaGo Performance Highlight" },
+            { href: "https://ibb.co/gFhhCRZ1", src: "https://i.ibb.co/pr55pLjD/Screenshot-2026-06-03-08-41-55-38-40deb401b9ffe8e1df2f1cc5ba480b12.jpg", alt: "NovaGo Browser Live Real-device Screenshot", title: "NovaGo Live UI Screenshot" },
+            { href: "https://ibb.co/Zp1h20Ht", src: "https://i.ibb.co/wFrKcfJ3/IMG-20260603-002423.png", alt: "NovaGo Browser Homepage Real Device Capture", title: "NovaGo Real Device Homepage" },
+            { href: "https://ibb.co/VYL0r0kr", src: "https://i.ibb.co/pj16G6kG/IMG-20260602-234419.png", alt: "NovaGo Night Mode and Dark Theme Screenshot", title: "NovaGo Dark Theme Screenshot" },
+            { href: "https://ibb.co/7d9NKS6Y", src: "https://i.ibb.co/8Lh49mSK/file-0000000093c0720b8e51bbdbf5e84227.png", alt: "NovaGo UI and UX Design Wireframes", title: "NovaGo UI/UX Wireframes" },
+            { href: "https://ibb.co/VYrL4Y6Q", src: "https://i.ibb.co/4R9FrRkY/1780146787842.png", alt: "NovaGo Settings and Configurations UI", title: "NovaGo Settings UI" },
+            { href: "https://ibb.co/Mxh5Gs9F", src: "https://i.ibb.co/216Ysy5G/file-00000000872072088c2f75f9d9d73f37.png", alt: "NovaGo Introduction and Onboarding Screen", title: "NovaGo Onboarding Screen" },
+            { href: "https://ibb.co/xSdVHFj0", src: "https://i.ibb.co/JRgXQ374/file-000000008fa07208ad2209753e442b24.png", alt: "NovaGo App Loading Splash Screen", title: "NovaGo Loading Splash Screen" },
+            { href: "https://ibb.co/GQh4x8Vq", src: "https://i.ibb.co/tpdTmvb9/1000063297.png", alt: "Stylized 'N' icon variant for NovaGo Browser", title: "NovaGo Browser Icon Variant" },
+            { href: "https://ibb.co/kVFnNWgK", src: "https://i.ibb.co/BHRD0SVL/file-0000000056147206bc69382b76429950.png", alt: "Clean user interface architecture graphic for NovaGo", title: "NovaGo Clean UI Architecture" },
+            { href: "https://ibb.co/nq4GJtkH", src: "https://i.ibb.co/WN7hJjKb/1776772957883.png", alt: "NovaGo Secure Private Browsing Mode Interface", title: "NovaGo Private Browsing Mode" }
+        ];
+
+        const galleryContainer = document.getElementById('gallery-container');
+
+        images.forEach(img => {
+            const link = document.createElement('a');
+            link.href = img.href;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.className = "group flex flex-col rounded-2xl overflow-hidden shadow-sm border border-slate-200/60 bg-white hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-300 hover:-translate-y-1";
+
+            link.innerHTML = `
+                <div class="relative aspect-[4/3] bg-slate-50/50 flex flex-col items-center justify-center p-6 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img 
+                        src="${img.src}" 
+                        alt="${img.alt}" 
+                        title="${img.title}"
+                        loading="lazy" 
+                        class="relative max-w-full max-h-full object-contain rounded drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
+                </div>
+                <div class="p-4 border-t border-slate-100 flex-1 flex flex-col justify-center">
+                    <h2 class="text-sm font-semibold text-slate-800 line-clamp-1 text-center group-hover:text-blue-600 transition-colors" title="${img.title}">
+                        ${img.title}
+                    </h2>
+                </div>
+            `;
+            
+            galleryContainer.appendChild(link);
+        });
+    </script>
+</body>
+</html>
